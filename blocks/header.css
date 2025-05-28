@@ -14,19 +14,17 @@
   flex-direction: row;
   gap: 2rem;
 }
+.header__text {
+    font-family: "Climate Crisis", sans-serif;
+    color: white;
+    padding-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
 .header__title {
-  font-family: "Climate Crisis", sans-serif;
-  letter-spacing: 0.1rem;
-  color: white;
   margin: auto auto auto 1rem;
-  padding-bottom: 1rem;
   width: fit-content;
 }
 .header__subtitle {
-  font-family: "Climate Crisis", sans-serif;
   font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  color: white;
-  padding-bottom: 1rem;
   margin: auto 1rem auto auto;
 }
