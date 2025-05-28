@@ -1,13 +1,17 @@
-# Time to Payoff (TTP) Version 1
+# Time to Payoff (TTP) Version 1.1
 
 ## Created by Karl (wittikay) Wilson
 
-### Features:
+### Change Notes:
+
+- Added styling and header portions. Settled on "Climate Crisis" for the application's main logo font (TTP). Used flexbox positioning for header styling and CSS gradient for background. Utilized line-spacing and other CSS styling techniques to achieve a unique implementation of the font.
+
+#### Features:
 
 - Inputs for balance, interest rate, and monthly payment.
 - Submit button that returns the payoff time in days, months, or years respectfully.
 
 Desktop view:
-![alt text](./images/image.png)
+![alt text](./images/desktop1.1.png)
 Mobile View:
-![alt text](./images/image-2.png)
+![alt text](./images/mobile1.1.png)
