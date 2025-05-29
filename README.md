@@ -1,8 +1,12 @@
-# Time to Payoff (TTP) Version 1.1
+# Time to Payoff (TTP) Version 1.2
 
 ## Created by Karl (wittikay) Wilson
 
 ### Change Notes:
+
+- Created universal styling class for header text and removed duplicate declarations.
+
+- Updated .ico image
 
 - Added styling and header portions. Settled on "Climate Crisis" for the application's main logo font (TTP). Used flexbox positioning for header styling and CSS gradient for background. Utilized line-spacing and other CSS styling techniques to achieve a unique implementation of the font.
 
