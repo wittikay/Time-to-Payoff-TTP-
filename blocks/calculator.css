@@ -1,0 +1,32 @@
+.calculator {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.calculator__form {
+  display: grid;
+  margin: 3rem;
+  padding: 3rem;
+  width: 30rem;
+  border-radius: 1rem;
+  background: #2a7b9b;
+  background: radial-gradient(
+    circle,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+}
+
+.calculator__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: left;
+  margin: 0.2rem 1rem;
+}
+
+.calculator__output-container {
+  text-align: center;
+}

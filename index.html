@@ -14,42 +14,53 @@
           <h1 class="header__title header__text">TTP</h1>
           <h2 class="header__subtitle header__text">(Time-to-Payoff)</h2>
         </div>
-        </section>
-        
+      </section>
+
       <section class="calculator">
-        <form action="" class="finance__calculator-form">
-          <label for="amount" class="calculator__label">Amount:</label>
-          <input
-            type="number"
-            id="amount"
-            class="calculator__input"
-            placeholder="Enter amount"
-          />
-          <label for="interest" class="calculator__label"
-            >Interest Rate (%):</label
-          >
-          <input
-            type="number"
-            id="interest"
-            class="calculator__input"
-            placeholder="Enter interest rate"
-          />
-          <label for="monthly-payment" class="calculator__label"
-            >Monthly Payment:</label
-          >
-          <input
-            type="number"
-            id="monthly-payment"
-            class="calculator__input"
-            placeholder="Enter monthly payment"
-          />
-          <label for="time-to-payoff" class="calculator__label"
-            >Time to Pay Off:</label
-          >
-          <output
-            id="time-to-payoff"
-            class="finance__calculator-output"
-          ></output>
+        <form action="" class="calculator__form">
+          <div class="calculator__container">
+            <label for="amount" class="calculator__label">Amount:</label>
+            <input
+              type="number"
+              id="amount"
+              class="calculator__input"
+              placeholder="Enter amount"
+            />
+          </div>
+          <div class="calculator__container">
+            <label for="interest" class="calculator__label"
+              >Interest Rate (%):</label
+            >
+            <input
+              type="number"
+              id="interest"
+              class="calculator__input"
+              placeholder="Enter interest rate"
+            />
+          </div>
+
+          <div class="calculator__container">
+            <label for="monthly-payment" class="calculator__label"
+              >Monthly Payment:</label
+            >
+            <input
+              type="number"
+              id="monthly-payment"
+              class="calculator__input"
+              placeholder="Enter monthly payment"
+            />
+          </div>
+
+          <div class="calculator__container calculator__output-container">
+            <label for="time-to-payoff" class="calculator__label"
+              >Time to Pay Off:</label
+            >
+            <output
+              id="time-to-payoff"
+              class="finance__calculator-output"
+            ></output>
+          </div>
+
           <button class="calculator__button">Submit</button>
         </form>
       </section>

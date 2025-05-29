@@ -1,5 +1,5 @@
 console.log("Coded by wittikay"); // this is a simple script that calculates the time it will take to pay off a balance based on user input. it uses the formula for calculating the number of months it will take to pay off a balance with interest. it also handles edge cases such as no interest, unrealistic inputs, and outputs the result in years, months, or days. this is version 1.2 of the script.
-const form = document.querySelector(".finance__calculator-form"); // selecting the form element from the HTML so we can reference it in the listener below.
+const form = document.querySelector(".calculator__form"); // selecting the form element from the HTML so we can reference it in the listener below.
 const amountId = document.getElementById("amount"); // selecting the element where the user inputs their current balance.
 const interestId = document.getElementById("interest"); // selecting the element where the user inputs their interest rate.
 const monthlyPaymentId = document.getElementById("monthly-payment"); // selecting the element where the user inputs their desired monthly payment amount.

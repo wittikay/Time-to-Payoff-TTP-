@@ -25,6 +25,9 @@
   width: fit-content;
 }
 .header__subtitle {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 700;
+    font-style: italic;
   font-size: 1.2rem;
   margin: auto 1rem auto auto;
 }
