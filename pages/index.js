@@ -4,7 +4,7 @@ const amountId = document.getElementById("amount"); // selecting the element whe
 const interestId = document.getElementById("interest"); // selecting the element where the user inputs their interest rate.
 const monthlyPaymentId = document.getElementById("monthly-payment"); // selecting the element where the user inputs their desired monthly payment amount.
 const output = document.querySelector("#time-to-payoff"); // selecting the output element from the HTML, where we plan to display our months variable.
-import { calculatePayoff } from "../scripts/payoffCalculator.js"; // importing the calculatePayoff function from the scripts folder, which contains the logic for calculating the payoff time based on user input.
+import { calculatePayoff } from "../utils/payoffCalculator.js"; // importing the calculatePayoff function from the scripts folder, which contains the logic for calculating the payoff time based on user input.
 form.addEventListener("submit", (evt) => {
   // this listener waits for the form submission before reading the values and calculating our desired output.
   evt.preventDefault();
