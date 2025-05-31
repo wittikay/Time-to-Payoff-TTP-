@@ -4,6 +4,10 @@
 
 ### Change Notes:
 
+- Moved modular js files to appropriately named folders.
+
+#### Previous Change Notes:
+
 - Created universal styling class for header text and removed duplicate declarations.
 
 - Updated .ico image
