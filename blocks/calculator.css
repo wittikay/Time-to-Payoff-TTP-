@@ -1,30 +1,47 @@
 .calculator {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   display: flex;
   justify-content: center;
 }
 
 .calculator__form {
   display: grid;
+  justify-content: center;
   margin: 3rem;
   padding: 3rem;
   width: 30rem;
   border-radius: 1rem;
-  background: #2a7b9b;
-  background: radial-gradient(
-    circle,
-    rgba(42, 123, 155, 1) 0%,
-    rgba(87, 199, 133, 1) 50%,
-    rgba(237, 221, 83, 1) 100%
+  background: #d4f1ff;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(212, 241, 255, 1) 0%,
+    rgba(219, 219, 219, 1) 48%,
+    rgba(252, 244, 192, 1) 100%
   );
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(212, 241, 255, 1) 0%,
+    rgba(219, 219, 219, 1) 48%,
+    rgba(252, 244, 192, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(212, 241, 255, 1) 0%,
+    rgba(219, 219, 219, 1) 48%,
+    rgba(252, 244, 192, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D4F1FF", endColorstr="#FCF4C0", GradientType=0);
 }
 
 .calculator__container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  text-align: left;
-  margin: 0.2rem 1rem;
+  gap: 0.5vh;
+  justify-content: center;
+  width: 56vw;
+  height: 4vh;
+  padding-bottom: 4vh;
+  margin: 0;
 }
 
 .calculator__output-container {
