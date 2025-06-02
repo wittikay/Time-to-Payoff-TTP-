@@ -3,7 +3,7 @@
 ## Created by Karl (wittikay) Wilson
 
 ### Change Notes:
-
+- Implemented responsive design for desktop and mobile use.
 - Significantly overhauled UI.
 - Ensured max compatibility when implementing gradient CSS (IE6+).
 #### Previous Change Notes:
@@ -20,6 +20,6 @@
 - Submit button that returns the payoff time in days, months, or years respectfully.
 
 Desktop view:
-![alt text](./images/desktop1.1.png)
+![alt text](./images/desktop1.2.png)
 Mobile View:
-![alt text](./images/mobile1.1.png)
+![alt text](./images/mobile1.2.png)

@@ -27,7 +27,6 @@ form.addEventListener("submit", (evt) => {
   );
 
   // TODO: add validation for the inputted values to ensure they are numbers and not negative.
-  // TODO: if monthly payment is <= 0, output a message saying "Monthly payment must be greater than 0." and return.
   // TODO: if amountInputted is <= 0, output a message saying "Congratulations! You either have no debt, paid off your debt, or are trying to break the calculator!" and return.
   // TODO: if interestInputted is < 0, output a message saying "Interest rates that are negative indicate you are being paid to borrow money, which is not realistic. Please check your inputs." and return.
   // TODO: if interestInputted is > 100, output a message saying "Interest rates above 100% are unrealistic. Please check your inputs." and return.
