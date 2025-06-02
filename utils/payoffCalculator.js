@@ -15,7 +15,10 @@ export function calculatePayoff(
   if (monthlyPayment <= 0) {
     return "Monthly payment must be greater than 0.";
   }
-  if (isNaN(interestInputted) || interestInputted < 0) {
+  if (interestInputted === "" || isNaN(interestInputted)) {
+    interestInputted = 0; // Default to 0 if not provided
+  }
+  if (interestInputted < 0) {
     return "Interest rates that are negative indicate you are being paid to borrow money, which is not realistic. Please check your inputs.";
   }
 
@@ -42,7 +45,7 @@ export function calculatePayoff(
   }
 
   // Handle invalid or unrealistic input
-  if (isNaN(months) || !isFinite(months)) {
+  if (isNaN(months)) {
     return "Data provided is unrealistic. Please check your inputs.";
   }
 

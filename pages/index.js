@@ -9,6 +9,19 @@ const interestId = document.getElementById("interest");
 const monthlyPaymentId = document.getElementById("monthly-payment");
 const monthlyFeeId = document.getElementById("monthly-fee");
 const output = document.querySelector("#time-to-payoff");
+const interestInput = document.getElementById("interest");
+const interestError = document.getElementById("interest-error");
+
+// Input Validation for interest
+ interestInput.addEventListener("input", () => {
+    const value = parseFloat(interestInput.value);
+    if (value > 99) {
+      interestError.textContent = "Interest cannot be greater than 99%.";
+    } else {
+      interestError.textContent = "";
+    }
+  });
+
 
 // Event Handler
 form.addEventListener("submit", (evt) => {

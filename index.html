@@ -13,7 +13,13 @@
       <section class="header">
         <div class="header__row">
           <h1 class="header__title header__text">TTP</h1>
-          <span class="header__signature">made by wittikay! <img src="./images/wittikay-logo.png" alt="A white illustration of wittikay, which roughly resemvles a panther." class="header__signature-img"></span>
+          <span class="header__signature"
+            >made by wittikay!
+            <img
+              src="./images/wittikay-logo.png"
+              alt="A white illustration of wittikay, which roughly resemvles a panther."
+              class="header__signature-img"
+          /></span>
           <h2 class="header__subtitle header__text">(Time-to-Payoff)</h2>
         </div>
       </section>
@@ -24,7 +30,7 @@
           <fieldset class="calculator__fieldset">
             <!-- Amount Input -->
             <div class="calculator__container">
-              <label for="amount" class="calculator__label">Amount:</label>
+              <label for="amount" class="calculator__label">Amount ($):</label>
               <input
                 type="number"
                 id="amount"
@@ -44,14 +50,12 @@
                 class="calculator__input"
                 placeholder="Enter interest rate"
               />
-              <span class="error-message"
-                >Interest cannot be greater than 99%.</span
-              >
+              <span id="interest-error" class="error-message"></span>
             </div>
             <!-- Monthly Payment Input -->
             <div class="calculator__container">
               <label for="monthly-payment" class="calculator__label"
-                >Monthly Payment:</label
+                >Monthly Payment ($):</label
               >
               <input
                 type="number"
@@ -64,7 +68,7 @@
 
             <div class="calculator__container">
               <label for="monthly-fee" class="calculator__label"
-                >(Optional) Monthly Fee</label
+                >(Optional) Monthly Fee ($)</label
               >
               <input
                 type="number"

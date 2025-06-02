@@ -21,6 +21,6 @@
 - Submit button that returns the payoff time in days, months, or years respectfully.
 
 Desktop view:
-![alt text](./images/desktop1.2.png)
+![alt text](./images/desktop1.2.2.png)
 Mobile View:
-![alt text](./images/mobile1.2.png)
+![alt text](./images/mobile1.2.2.png)
