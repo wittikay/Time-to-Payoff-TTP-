@@ -9,8 +9,9 @@
   display: grid;
   justify-content: center;
   margin: 3rem;
-  padding: 2.5rem;
-  width: 35rem;
+  padding: 2.5rem 1rem;
+  width: 100%;
+  max-width: 35rem;
   border-radius: 1rem;
   background: #d4f1ff;
   background: -webkit-linear-gradient(
@@ -35,12 +36,12 @@
 }
 
 .calculator__fieldset {
-    width: 100%;
-    border: none;
-    display: grid;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
+  width: 100%;
+  border: none;
+  display: grid;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 
 .calculator__container {
@@ -61,9 +62,9 @@
   font-size: 1.1rem;
   min-height: 1.5rem;
   padding: 0.5rem 0.5rem;
-  margin: auto;
   box-sizing: border-box;
-  width: 23vh%;
+  width: 21rem;
+  text-align: center;
 }
 
 .calculator__button {
