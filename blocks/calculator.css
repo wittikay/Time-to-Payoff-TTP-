@@ -34,11 +34,20 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D4F1FF", endColorstr="#FCF4C0", GradientType=0);
 }
 
+.calculator__fieldset {
+    width: 100%;
+    border: none;
+    display: grid;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
 .calculator__container {
+  width: 100%;
   display: grid;
-  gap: 0.5vh;
-  justify-content: center;
-  padding-bottom: 4vh;
+  gap: 0.8vh;
+  padding-bottom: 2vh;
   margin: 0;
 }
 
@@ -52,8 +61,9 @@
   font-size: 1.1rem;
   min-height: 1.5rem;
   padding: 0.5rem 0.5rem;
+  margin: auto;
   box-sizing: border-box;
-  width: 100%;
+  width: 23vh%;
 }
 
 .calculator__button {

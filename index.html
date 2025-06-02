@@ -13,7 +13,7 @@
       <section class="header">
         <div class="header__row">
           <h1 class="header__title header__text">TTP</h1>
-          <span class="header__signature">made by wittikay!</span>
+          <span class="header__signature">made by wittikay! <img src="./images/wittikay-logo.png" alt="A white illustration of wittikay, which roughly resemvles a panther." class="header__signature-img"></span>
           <h2 class="header__subtitle header__text">(Time-to-Payoff)</h2>
         </div>
       </section>
@@ -21,64 +21,72 @@
       <!-- Calculator Section -->
       <section class="calculator">
         <form action="" class="calculator__form">
-          <!-- Amount Input -->
-          <div class="calculator__container">
-            <label for="amount" class="calculator__label">Amount:</label>
-            <input
-              type="number"
-              id="amount"
-              class="calculator__input"
-              placeholder="Enter amount"
-            />
-          </div>
-          <!-- Interest Rate Input -->
-          <div class="calculator__container">
-            <label for="interest" class="calculator__label"
-              >Interest Rate (%):</label
-            >
-            <input
-              type="number"
-              id="interest"
-              class="calculator__input"
-              placeholder="Enter interest rate"
-            />
-          </div>
-          <!-- Monthly Payment Input -->
-          <div class="calculator__container">
-            <label for="monthly-payment" class="calculator__label"
-              >Monthly Payment:</label
-            >
-            <input
-              type="number"
-              id="monthly-payment"
-              class="calculator__input"
-              placeholder="Enter monthly payment"
-            />
-          </div>
+          <fieldset class="calculator__fieldset">
+            <!-- Amount Input -->
+            <div class="calculator__container">
+              <label for="amount" class="calculator__label">Amount:</label>
+              <input
+                type="number"
+                id="amount"
+                class="calculator__input"
+                placeholder="Enter amount"
+              />
+              <span class="error-message"></span>
+            </div>
+            <!-- Interest Rate Input -->
+            <div class="calculator__container">
+              <label for="interest" class="calculator__label"
+                >Interest Rate (%):</label
+              >
+              <input
+                type="number"
+                id="interest"
+                class="calculator__input"
+                placeholder="Enter interest rate"
+              />
+              <span class="error-message"
+                >Interest cannot be greater than 99%.</span
+              >
+            </div>
+            <!-- Monthly Payment Input -->
+            <div class="calculator__container">
+              <label for="monthly-payment" class="calculator__label"
+                >Monthly Payment:</label
+              >
+              <input
+                type="number"
+                id="monthly-payment"
+                class="calculator__input"
+                placeholder="Enter monthly payment"
+              />
+              <span class="error-message"></span>
+            </div>
 
-          <div class="calculator__container">
-            <label for="monthly-fee" class="calculator__label"
-              >(Optional) Monthly Fee</label
-            >
-            <input
-              type="number"
-              id="monthly-fee"
-              class="calculator__input"
-              placeholder="Enter monthly fee"
-            />
-          </div>
-          <!-- Output -->
-          <div class="calculator__container calculator__output-container">
-            <label for="time-to-payoff" class="calculator__label"
-              >Time to Pay Off:</label
-            >
-            <output
-              id="time-to-payoff"
-              class="finance__calculator-output"
-            ></output>
-          </div>
-          <!-- Submit Button -->
-          <button class="calculator__button">Submit</button>
+            <div class="calculator__container">
+              <label for="monthly-fee" class="calculator__label"
+                >(Optional) Monthly Fee</label
+              >
+              <input
+                type="number"
+                id="monthly-fee"
+                class="calculator__input"
+                placeholder="Enter monthly fee"
+              />
+              <span class="error-message"></span>
+            </div>
+            <!-- Output -->
+            <div class="calculator__container calculator__output-container">
+              <label for="time-to-payoff" class="calculator__label"
+                >Time to Pay Off:</label
+              >
+              <output
+                id="time-to-payoff"
+                class="finance__calculator-output"
+              ></output>
+            </div>
+            <!-- Submit Button -->
+            <button class="calculator__button">Submit</button>
+          </fieldset>
         </form>
       </section>
     </div>
