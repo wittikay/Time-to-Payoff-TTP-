@@ -32,7 +32,9 @@
           </div>
           <!-- Interest Rate Input -->
           <div class="calculator__container">
-            <label for="interest" class="calculator__label">Interest Rate (%):</label>
+            <label for="interest" class="calculator__label"
+              >Interest Rate (%):</label
+            >
             <input
               type="number"
               id="interest"
@@ -42,7 +44,9 @@
           </div>
           <!-- Monthly Payment Input -->
           <div class="calculator__container">
-            <label for="monthly-payment" class="calculator__label">Monthly Payment:</label>
+            <label for="monthly-payment" class="calculator__label"
+              >Monthly Payment:</label
+            >
             <input
               type="number"
               id="monthly-payment"
@@ -50,9 +54,23 @@
               placeholder="Enter monthly payment"
             />
           </div>
+
+          <div class="calculator__container">
+            <label for="monthly-fee" class="calculator__label"
+              >(Optional) Monthly Fee</label
+            >
+            <input
+              type="number"
+              id="monthly-fee"
+              class="calculator__input"
+              placeholder="Enter monthly fee"
+            />
+          </div>
           <!-- Output -->
           <div class="calculator__container calculator__output-container">
-            <label for="time-to-payoff" class="calculator__label">Time to Pay Off:</label>
+            <label for="time-to-payoff" class="calculator__label"
+              >Time to Pay Off:</label
+            >
             <output
               id="time-to-payoff"
               class="finance__calculator-output"

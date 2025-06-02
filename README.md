@@ -4,6 +4,8 @@
 
 ### Change Notes:
 
+- Added optional monthly fee function with corresponding input checks and return messages.
+- Check for zero or negative monthly payment added.
 - Moved modular js files to appropriately named folders.
 
 #### Previous Change Notes:
