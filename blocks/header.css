@@ -3,6 +3,7 @@
   display: block;
 }
 .header__row {
+  position: relative;
   background: #000000;
   background: linear-gradient(
     180deg,
@@ -10,24 +11,36 @@
     rgba(84, 77, 77, 1) 72%,
     rgba(255, 255, 255, 0) 100%
   );
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  display: grid;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .header__text {
-  font-family: "Climate Crisis", sans-serif;
+  font-family: "Climate Crisis", Arial, sans-serif;
+  font-size: 9.2rem;
   color: white;
   padding-bottom: 1rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
 }
 .header__title {
-  margin: auto auto auto 1rem;
+  margin: 0 auto 0;
+  padding: 0;
   width: fit-content;
 }
 .header__subtitle {
   font-family: "Inter Tight", sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.2rem;
-  margin: auto 1rem auto auto;
+  font-size: 2.2rem;
+  margin: 0 auto 0;
+}
+
+.header__signature {
+  position: absolute;
+  color: white;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  top: 54%;
+  right: 31%;
+  transform: rotate(-21deg);
 }
