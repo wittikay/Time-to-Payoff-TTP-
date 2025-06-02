@@ -3,6 +3,7 @@
 ## Created by Karl (wittikay) Wilson
 
 ### Change Notes:
+- Adjusted JS script to include robust validation.
 - Implemented responsive design for desktop and mobile use.
 - Significantly overhauled UI.
 - Ensured max compatibility when implementing gradient CSS (IE6+).

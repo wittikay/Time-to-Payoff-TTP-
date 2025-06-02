@@ -1,23 +1,37 @@
+// Calculates the time to pay off a balance based on balance, monthly payment, interest rate, and optional monthly fee.
 export function calculatePayoff(
   amountInputted,
   interestInputted,
   monthlyPayment,
   monthlyFee = 0
 ) {
-  let months;
-
-  // Check for zero or negative monthly payment
+  // Input validation
+  if (isNaN(amountInputted) || amountInputted <= 0) {
+    return "Please enter a valid amount greater than 0.";
+  }
+  if (isNaN(monthlyFee) || monthlyFee < 0) {
+    return "Please enter a valid monthly fee greater than or equal to 0.";
+  }
   if (monthlyPayment <= 0) {
     return "Monthly payment must be greater than 0.";
   }
+  if (isNaN(interestInputted) || interestInputted < 0) {
+    return "Interest rates that are negative indicate you are being paid to borrow money, which is not realistic. Please check your inputs.";
+  }
 
-  // Handle monthly fee
+  // Calculate effective payment after monthly fee
   const effectivePayment = monthlyPayment - monthlyFee;
   if (effectivePayment <= 0) {
     return "Monthly payment must be greater than the monthly fee.";
   }
 
+  // Immediate payoff check
+  if (monthlyPayment >= amountInputted) {
+    return "You can pay off your balance immediately.";
+  }
+
   // Calculate months to payoff
+  let months;
   if (!interestInputted || interestInputted === 0) {
     months = amountInputted / monthlyPayment;
   } else {
@@ -26,17 +40,13 @@ export function calculatePayoff(
       Math.log(effectivePayment / (effectivePayment - r * amountInputted)) /
       Math.log(1 + r);
   }
-  // Handle monthly payment being greater than or equal to the amount
-  if (monthlyPayment >= amountInputted) {
-    return "You can pay off your balance immediately.";
-  }
 
   // Handle invalid or unrealistic input
   if (isNaN(months) || !isFinite(months)) {
     return "Data provided is unrealistic. Please check your inputs.";
   }
 
-  // Output in years if 12 months or more
+  // Output formatting
   if (months >= 12) {
     const years = Math.floor(months / 12);
     if (years >= 100) {
@@ -44,14 +54,10 @@ export function calculatePayoff(
     }
     return `It will take you ${years} years to pay off your balance.`;
   }
-
-  // Output in days if 1 month or less
   if (months <= 1) {
     const days = Math.ceil(months * 30);
     return `It will take you ${days} days to pay off your balance.`;
   }
-
-  // Output in months if between 1 and 12 months
   if (months > 1 && months < 12) {
     return `It will take you ${Math.ceil(
       months
