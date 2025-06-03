@@ -54,18 +54,24 @@
               />
               <span id="interest-error" class="error-message"></span>
             </div>
+
+            
             <!-- Monthly Payment Input -->
             <div class="calculator__container">
-              <label for="monthly-payment" class="calculator__label"
-                >Monthly Payment ($):</label
+              <label for="payment-amount" class="calculator__label"
+                >Payment Amount ($):</label
               >
               <input
                 type="number"
-                id="monthly-payment"
+                id="payment-amount"
                 class="calculator__input"
-                placeholder="Enter monthly payment (numbers only)"
+                placeholder="Enter payment amount(numbers only)"
                 step="any"
               />
+              <select name="payment-frequency" id="payment-frequency" class="calculator__select">
+              <option value="daily">Daily</option>
+              <option value="monthly">Monthly</option>
+              </select>
               <span class="error-message"></span>
             </div>
 

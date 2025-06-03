@@ -2,8 +2,9 @@
 export function calculatePayoff(
   amountInputted,
   interestInputted,
-  monthlyPayment,
-  monthlyFee = 0
+  paymentAmount,
+  monthlyFee = 0,
+  paymentFrequency = "monthly"
 ) {
   // Input validation
   if (isNaN(amountInputted) || amountInputted <= 0) {
@@ -12,7 +13,7 @@ export function calculatePayoff(
   if (isNaN(monthlyFee) || monthlyFee < 0) {
     return "Please enter a valid monthly fee greater than or equal to 0.";
   }
-  if (monthlyPayment <= 0) {
+  if (paymentAmount <= 0) {
     return "Monthly payment must be greater than 0.";
   }
   if (interestInputted === "" || isNaN(interestInputted)) {
@@ -23,48 +24,74 @@ export function calculatePayoff(
   }
 
   // Calculate effective payment after monthly fee
-  const effectivePayment = monthlyPayment - monthlyFee;
+  let effectivePayment;
+  if (paymentFrequency === "daily") {
+    effectivePayment = paymentAmount - monthlyFee / 30; // Assuming 30 days in a month
+  } else {
+    effectivePayment = paymentAmount - monthlyFee;
+  }
   if (effectivePayment <= 0) {
     return "Monthly payment must be greater than the monthly fee.";
   }
 
   // Immediate payoff check
-  if (monthlyPayment >= amountInputted) {
+  if (paymentAmount >= amountInputted) {
     return "You can pay off your balance immediately.";
   }
 
-  // Calculate months to payoff
-  let months;
+  // Calculate periods to payoff
+  let periods;
   if (!interestInputted || interestInputted === 0) {
-    months = amountInputted / monthlyPayment;
+    periods = amountInputted / effectivePayment;
   } else {
-    const r = interestInputted / 100 / 12;
-    months =
+    const r =
+      paymentFrequency === "daily"
+        ? interestInputted / 100 / 365 // Daily interest rate
+        : interestInputted / 100 / 12; // Monthly interest rate
+    periods =
       Math.log(effectivePayment / (effectivePayment - r * amountInputted)) /
       Math.log(1 + r);
   }
 
   // Handle invalid or unrealistic input
-  if (isNaN(months)) {
+  if (isNaN(periods)) {
     return "Data provided is unrealistic. Please check your inputs.";
   }
 
   // Output formatting
-  if (months >= 12) {
-    const years = Math.floor(months / 12);
-    if (years >= 100) {
-      return "Payoff time is 100 years or longer.";
+  if (paymentFrequency === "monthly") {
+    if (periods >= 12) {
+      const years = Math.floor(periods / 12);
+      if (years >= 100) {
+        return "Payoff time is 100 years or longer.";
+      }
+      return `It will take you ${years} year(s) to pay off your balance.`;
     }
-    return `It will take you ${years} years to pay off your balance.`;
-  }
-  if (months <= 1) {
-    const days = Math.ceil(months * 30);
-    return `It will take you ${days} days to pay off your balance.`;
-  }
-  if (months > 1 && months < 12) {
-    return `It will take you ${Math.ceil(
-      months
-    )} months to pay off your balance.`;
+    if (periods <= 1) {
+      const days = Math.ceil(periods * 30);
+      return `It will take you ${days} day(s) to pay off your balance.`;
+    }
+    if (periods > 1 && periods < 12) {
+      return `It will take you ${Math.ceil(
+        periods
+      )} month(s) to pay off your balance.`;
+    }
+  } else if (paymentFrequency === "daily") {
+    if (periods >= 365) {
+      const years = Math.floor(periods / 365);
+      if (years >= 100) {
+        return "Payoff time is 100 years or longer.";
+      }
+      return `It will take you ${years} years to pay off your balance.`;
+    }
+    if (periods <= 1) {
+      return `It will take you 1 day to pay off your balance.`;
+    }
+    if (periods > 1 && periods < 365) {
+      return `It will take you ${Math.ceil(
+        periods
+      )} days to pay off your balance.`;
+    }
   }
 
   // Fallback error
