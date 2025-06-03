@@ -3,12 +3,13 @@
 ## Created by Karl (wittikay) Wilson
 
 ### Change Notes:
+- Added daily payment and daily interest options. Payments and interest are compounded depending on their selection of daily or monthly frequencies. Styling applied to both new features.
+#### Previous Change Notes:
 - Allow for floating point numbers in interest input field.
 - Adjusted JS script to include robust validation.
 - Implemented responsive design for desktop and mobile use.
 - Significantly overhauled UI.
 - Ensured max compatibility when implementing gradient CSS (IE6+).
-#### Previous Change Notes:
 - Added optional monthly fee function with corresponding input checks and return messages.
 - Check for zero or negative monthly payment added.
 - Moved modular js files to appropriately named folders.
@@ -18,10 +19,10 @@
 
 #### Features:
 
-- Inputs for balance, interest rate, and monthly payment.
-- Submit button that returns the payoff time in days, months, or years respectfully.
+- Returns a value in days, months, or years until payoff based off of the inputted balance, interest rate, and payment. Payments can be made to be daily or monthly. Interest can be compounded daily or monthly.
+
 
 Desktop view:
-![alt text](./images/desktop1.2.2.png)
+![alt text](./images/desktop1.2.3.png)
 Mobile View:
-![alt text](./images/mobile1.2.2.png)
+![alt text](./images/mobile1.2.3.png)

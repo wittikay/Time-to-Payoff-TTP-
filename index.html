@@ -52,10 +52,17 @@
                 placeholder="Enter interest rate (numbers only)"
                 step="any"
               />
+              <select
+                name="interest-frequency"
+                id="interest-frequency"
+                class="calculator__select"
+              >
+                <option value="daily">Daily</option>
+                <option value="monthly">Monthly</option>
+              </select>
               <span id="interest-error" class="error-message"></span>
             </div>
 
-            
             <!-- Monthly Payment Input -->
             <div class="calculator__container">
               <label for="payment-amount" class="calculator__label"
@@ -68,9 +75,13 @@
                 placeholder="Enter payment amount(numbers only)"
                 step="any"
               />
-              <select name="payment-frequency" id="payment-frequency" class="calculator__select">
-              <option value="daily">Daily</option>
-              <option value="monthly">Monthly</option>
+              <select
+                name="payment-frequency"
+                id="payment-frequency"
+                class="calculator__select"
+              >
+                <option value="daily">Daily</option>
+                <option value="monthly">Monthly</option>
               </select>
               <span class="error-message"></span>
             </div>

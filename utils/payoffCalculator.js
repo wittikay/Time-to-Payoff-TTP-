@@ -4,7 +4,8 @@ export function calculatePayoff(
   interestInputted,
   paymentAmount,
   monthlyFee = 0,
-  paymentFrequency = "monthly"
+  paymentFrequency = "monthly",
+  interestFrequency = "monthly"
 ) {
   // Input validation
   if (isNaN(amountInputted) || amountInputted <= 0) {
@@ -44,10 +45,16 @@ export function calculatePayoff(
   if (!interestInputted || interestInputted === 0) {
     periods = amountInputted / effectivePayment;
   } else {
-    const r =
-      paymentFrequency === "daily"
-        ? interestInputted / 100 / 365 // Daily interest rate
-        : interestInputted / 100 / 12; // Monthly interest rate
+    let r;
+    if (interestFrequency === "daily") {
+      r = interestInputted / 100 / 365; // Daily interest rate
+    } else {
+      r = interestInputted / 100 / 12; // convert monthly rate to monthly decimal
+      if (paymentFrequency === "daily") {
+        // convert monthly rate to daily
+        r = Math.pow(1 + r, 1 / 30) - 1;
+      }
+    }
     periods =
       Math.log(effectivePayment / (effectivePayment - r * amountInputted)) /
       Math.log(1 + r);

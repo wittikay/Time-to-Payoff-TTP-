@@ -1,4 +1,4 @@
- /* TODO: style the calculator form and output to make it more visually appealing and user-friendly */
+/* TODO: style the calculator form and output to make it more visually appealing and user-friendly */
 .calculator {
   font-family: "Inter Tight", sans-serif;
   font-weight: 400;
@@ -66,6 +66,16 @@
   box-sizing: border-box;
   width: 21rem;
   text-align: center;
+}
+
+.calculator__select {
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  min-height: 1.5rem;
+  padding: 0.5rem 0.5rem;
+  box-sizing: border-box;
+  width: 21rem;
 }
 
 .calculator__button {

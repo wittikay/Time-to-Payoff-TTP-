@@ -13,6 +13,7 @@ const interestInput = document.getElementById("interest");
 const interestError = document.getElementById("interest-error");
 const paymentAmountId = document.getElementById("payment-amount");
 const paymentFrequencyId = document.getElementById("payment-frequency");
+const interestFrequencyId = document.getElementById("interest-frequency");
 
 // Input Validation for interest
 interestInput.addEventListener("input", () => {
@@ -33,13 +34,15 @@ form.addEventListener("submit", (evt) => {
   const paymentAmount = parseFloat(paymentAmountId.value);
   const monthlyFee = parseFloat(monthlyFeeId.value) || 0; // Default to 0 if not provided
   const paymentFrequency = paymentFrequencyId.value;
+  const interestFrequency = interestFrequencyId.value;
 
   output.textContent = calculatePayoff(
     amountInputted,
     interestInputted,
     paymentAmount,
     monthlyFee,
-    paymentFrequency
+    paymentFrequency,
+    interestFrequency
   );
 });
 
