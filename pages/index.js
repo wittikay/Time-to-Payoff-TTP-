@@ -6,7 +6,6 @@ console.log("Coded by wittikay");
 const form = document.querySelector(".calculator__form");
 const amountId = document.getElementById("amount");
 const interestId = document.getElementById("interest");
-const monthlyPaymentId = document.getElementById("monthly-payment");
 const monthlyFeeId = document.getElementById("monthly-fee");
 const output = document.querySelector("#time-to-payoff");
 const interestInput = document.getElementById("interest");
@@ -16,6 +15,19 @@ const paymentFrequencyId = document.getElementById("payment-frequency");
 const interestFrequencyId = document.getElementById("interest-frequency");
 
 // Input Validation for interest
+
+function validateInputs(amount, payment, fee, interest) {
+  // Input validation
+  if (isNaN(amount) || amount <= 0)
+    return "Please enter a valid amount greater than 0.";
+  if (isNaN(fee) || fee < 0)
+    return "Please enter a valid monthly fee greater than or equal to 0.";
+  if (payment <= 0) return "Monthly payment must be greater than 0.";
+  if (interest === "" || isNaN(interest)) return null;
+  if (interest < 0)
+    return "Interest rates that are negative indicate you are being paid to borrow money, which is not realistic. Please check your inputs.";
+}
+validateInputs(amountId.value, paymentAmountId.value, monthlyFeeId.value, interestId.value);
 interestInput.addEventListener("input", () => {
   const value = parseFloat(interestInput.value);
   if (value > 99) {

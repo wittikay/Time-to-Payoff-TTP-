@@ -48,6 +48,7 @@
 .calculator__container {
   width: 100%;
   display: grid;
+  justify-content: center;
   gap: 0.8vh;
   padding-bottom: 2vh;
   margin: 0;
@@ -88,4 +89,10 @@
   background: #2196f3;
   color: #fff;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.calculator__button:hover {
+  background: #1976d2;
+
 }

@@ -3,6 +3,8 @@
 ## Created by Karl (wittikay) Wilson
 
 ### Change Notes:
+- Update styling.
+- Clarify output formatting, centralize validation, remove unused selectors.
 - Added daily payment and daily interest options. Payments and interest are compounded depending on their selection of daily or monthly frequencies. Styling applied to both new features.
 #### Previous Change Notes:
 - Allow for floating point numbers in interest input field.
