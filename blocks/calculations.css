@@ -1,0 +1,26 @@
+.calculations__container {
+  color: white;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+}
+
+.calculations__title {
+    margin: 0;
+    padding: 0;
+}
+
+.calculations__empty {
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+.calculations__error-msg {
+    color: white;
+}
+
+.calculations__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

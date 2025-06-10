@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TTP (Time-to-Payoff)</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" href="../favicon.ico" type="image/ico" sizes="16x32" />
+    <link rel="icon" href="./favicon.ico" type="image/ico" sizes="16x32" />
   </head>
   <body>
     <div class="page">
@@ -110,9 +110,21 @@
               ></output>
             </div>
             <!-- Submit Button -->
-            <button class="calculator__button">Submit</button>
+            <button type="submit" class="calculator__button">Submit</button>
           </fieldset>
         </form>
+      </section>
+      <!-- Saved calculations -->
+      <section class="calculations">
+        <div class="calculations__container">
+          <h2 class="calculations__title">Saved Calculations</h2>
+          <button type="submit" class="calculator__button calculations__save-btn">Save</button>
+          <button type="reset" class="calculator__button calculations__clear-btn">Clear</button>
+          <div class="calculations__list">
+            <p class="calculations__error-msg"></p>
+            <p class="calculations__empty">No saved calculations yet.</p>
+          </div>
+        </div>
       </section>
     </div>
     <script type="module" src="./pages/index.js" defer></script>
